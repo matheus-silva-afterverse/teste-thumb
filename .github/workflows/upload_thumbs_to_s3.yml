@@ -27,8 +27,8 @@ jobs:
 
       - name: Upload images to S3
         run: |
-          aws s3 sync ./Assets/Multiplayer/Thumbs s3://teste-thumb-matheus-silva/ \
+          aws s3 sync ./Assets/Multiplayer/Thumbs s3://teste-thumb-matheus-silva/ --size-only \
             --exclude "*" \
-            --include "thumb-*.png" \ 
-            --size-only \
+            --include "thumb-*.png"
+        
             
