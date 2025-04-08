@@ -26,7 +26,8 @@ jobs:
           aws-region: us-east-1
 
       - name: Upload images to S3
-        run: aws s3 sync ./Assets/Multiplayer/Thumbs s3://teste-thumb-matheus-silva/ \
-              --exclude "*" \
-              --include "thumb-*.png" \
+        run: |
+          aws s3 sync ./Assets/Multiplayer/Thumbs s3://teste-thumb-matheus-silva/ \
+            --exclude "*" \
+            --include "thumb-*.png" \
             
